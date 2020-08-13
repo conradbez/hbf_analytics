@@ -1,8 +1,6 @@
-
-from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
+from airflow.models import DAG
+from airflow.operators.dummy_operator import DummyOperator
 from datetime import datetime, timedelta
-
 
 dag = DAG(
     'tutorial',
