@@ -1,1 +1,1 @@
-web: airflow scheduler -D
+web: airflow webserver --port $PORT & airflow scheduler
