@@ -1,1 +1,3 @@
-web: (airflow scheduler -D) && (airflow webserver -p $PORT -D)
+web: airflow webserver -p $PORT 
+worker: airflow worker 
+scheduler: airflow scheduler
