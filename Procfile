@@ -1,1 +1,1 @@
-web: airflow webserver -p $PORT -D && sleep 20 && airflow scheduler
+web: airflow webserver -p $PORT -D & sleep 20 && airflow scheduler
