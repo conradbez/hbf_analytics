@@ -2,6 +2,7 @@
 
 dokku apps:create hbf
 
+# ufw allow PORT
 
 # sudo dokku plugin:install https://github.com/dokku/dokku-postgres.git postgres
 dokku postgres:create hbf
