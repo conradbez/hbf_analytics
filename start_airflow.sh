@@ -4,6 +4,5 @@ export PORT=8080
 airflow initdb
 sleep 20
 airflow webserver -p $PORT -D
-export AIRFLOW_HOME=$(pwd)/airflow  
 sleep 5
 airflow scheduler -D
