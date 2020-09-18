@@ -5,5 +5,5 @@
 !*gitignore
 !airflow.cfg
 !*dag.py
-!*dag.yaml
+!*dag.yml
 !*/
