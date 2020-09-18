@@ -1,4 +1,4 @@
 tasks:
   - init: pip3 install -r ./requirements.txt && echo "export PORT=8080" >> ~/.bashrc && echo "export AIRFLOW_HOME=~" >> ~/.bashrc 
-  - command: export AIRFLOW_HOME=$(pwd)/airflow  && export PORT=8080 && sleep 4 && airflow webserver -p $PORT 
+  - command: export AIRFLOW_HOME=$(pwd)/airflow  && export PORT=8080 && sleep 20 && airflow webserver -p $PORT 
   - command: export AIRFLOW_HOME=$(pwd)/airflow  && sleep 5 && airflow initdb && airflow scheduler
