@@ -1,16 +1,7 @@
 from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
-from datetime import datetime, timedelta
+import dagfactory
 
+dag_factory = dagfactory.DagFactory("/path/to/dags/config_file.yml")
 
-dag = DAG(
-    'tutorial',
-    start_date=datetime.today() - timedelta(days=1),
-    schedule_interval=timedelta(days=1)
-)
-
-t1 = BashOperator(
-    task_id='print_date',
-    bash_command='date',
-    dag=dag
-)
+dag_factory.clean_dags(globals())
+dag_factory.generate_dags(globals())
