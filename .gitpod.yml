@@ -1,2 +1,4 @@
 tasks:
-  - init: pip3 install -r ./requirements.txt
+  - init: pip3 install -r ./requirements.txt && airflow initdb && export PORT="8080"
+  - command: sleep 4 && airflow webserver -p $PORT -D & sleep 20 && airflow scheduler
+
