@@ -4,3 +4,4 @@ dbt
 apache-airflow[kubernetes]
 paramiko
 streamlit
+kubernetes
